@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-lIst</title>
+</head>
+<body>
+    <div id="wrapper" class="wrapper">
+        <div class="header">
+            <h2>Todo's</h2>
+        </div>
+        <div class="sideBar">
+            <div class="taskNavBar">
+                <h2>Tasks</h2>
+                <ul>
+                    <li><a href="#" id="homeLink">Home</a></li>
+                    <li><a href="#" id="todayLink">Today</a></li>
+                    <li><a href="#" id="weekLink">Week</a></li>
+                </ul>
+                <div class="createNewBtn" id="createNewBtn">
+                    <img src="./images/createNew.svg" alt="add new task icon">
+                    <p>Add a ToDo</p>
+                </div>
+            </div>
+            <div class="projectsNavBar">
+                <h2>Projects</h2>
+                <div class="projectsContainer" id="projectsContainer"></div>
+                <div id="createProjecBtn" class="createProjecBtn">
+                    <img src="./images/createNew.svg" alt="add Btn">
+                    <p>Add a Project</p>
+                </div>
+
+            </div>
+            
+           
+        </div>
+        <div class="main" id="main"></div>
+        <div class="formContainerHidden" id="formContainer">
+            <div class="formHeader">
+                <h2>Create A New</h2>
+                <img src="./images/close.svg" alt="close icon" class="closeIcon" id="closeBtn">
+            </div>
+            
+            <form id="taskForm">
+                <label for="projectSelection">Select Project:</label>
+                <select name="projectSelection" id="projectSelection"></select>
+                <label for="title">Title: </label>
+                <input type="text" name="title" id="title" placeholder="enter task name" required>
+
+                <label for="description">Details:</label>
+                <input type="textarea" name="description" id="description" placeholder="enter details" required>
+
+                <label for="dueDate">DueDate:</label>
+                <input type="date" name="dueDate" id="dueDate" required>
+                <label for="priority">Priority:</label>
+                <select name="priority" id="priority">
+                    <option value="low">low</option>
+                    <option value="medium">medium</option>
+                    <option value="high">high</option>
+                </select>
+                <button class="addButton" id="addButton">Add Task</button>
+            </form>
+           
+        </div>
+        <div class="projectFormContainerHidden" id="projectFormContainer">
+            <div class="formHeader">
+                <h2>Create A New</h2>
+                <img src="./images/close.svg" alt="close icon" class="closeIcon" id="closeProjectFormBtn">
+            </div>
+            <form id="projectForm">
+                <label for="projectTitle">Title: </label>
+                <input type="text" name="projectTitle" id="projectTitle" placeholder="enter project name" required>
+                <button class="addProjectButton" id="addProjectButton">Add Project</button>
+            </form>
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+    
+</body>
+</html>
